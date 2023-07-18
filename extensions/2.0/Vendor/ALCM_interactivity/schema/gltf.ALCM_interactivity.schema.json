@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "ALCM_interactivity glTF Extension",
+  "type": "object",
+  "description": "glTF Extension that enables additional information on 3d models for interactive presentation.",
+  "allOf": [ { "$ref": "glTFProperty.schema.json" } ],
+  "properties": {
+    "i18n": {
+      "type": "object",
+      "description": "Translation keys to be used globally in this scene.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "gltf_detailedDescription": "Nested object of translations, toplevel is the language specifier, second level is the translation key, value is the translation itself."
+    },
+    "extensions": { },
+    "extras": { }
+  }
+}
